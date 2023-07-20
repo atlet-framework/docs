@@ -20,7 +20,7 @@ export default withLayout(Layout, (props: Props) => {
       </div>
 
       <div class="flex lg:flex-row flex-col gap-4">
-        <div class="flex-1 space-y-2">
+        <div class="flex-1 space-y-4">
           <p>
             As cliché as it sounds, Atlet was built with simplicity in mind. Sometimes, it might
             be slightly overwhelming to do even something simple, using modern tools and frameworks.
