@@ -12,12 +12,12 @@ export default function Navbar(props: Props) {
             v-bind:class="{
               '-translate-x-1': menuVisible,
             }">
-            <span class="material-symbols-outlined">menu</span>
+            <img class="h-6 w-6" src="/img/icons/menu.svg" alt="menu" />
           </button>
         )}
 
         <a href="/" class="text-xl pl-3 flex items-center space-x-3">
-          <img src="/img/logo.png" alt="atlet logo" class="h-8 w-8" />
+          <img src="/img/logo.png" alt="atlet logo" class="h-6 w-6" />
           <span>Atlet</span>
         </a>
       </div>

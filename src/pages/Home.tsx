@@ -64,7 +64,7 @@ export default withLayout(Layout, (props: Props) => {
       <div class="flex justify-center">
         <a href="/docs" class="py-4 px-5 rounded-sm font-medium inline-flex space-x-3 items-center bg-gray-100 text-gray-900 group hover:bg-gray-200">
           <span class="group-hover:underline">Go to the Documentation</span>
-          <span class="material-symbols-outlined">arrow_forward</span>
+          <img class="h-6 w-6" src="/img/icons/arrow_forward.svg" alt="arrow forward" />
         </a>
       </div>
     </div>
