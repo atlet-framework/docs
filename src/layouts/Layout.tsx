@@ -8,7 +8,7 @@ export default function Layout(props: Props) {
     <link rel="stylesheet" href="/css/code-theme.css" />,
     <link rel="icon" href="/img/favicon.png" />,
     <link rel="manifest" href="/manifest.json" />,
-    <link rel="apple-touch-icon" href="/img/favicon.png" />,
+    <link rel="apple-touch-icon" href="/img/logo.png" />,
     <meta name="apple-mobile-web-app-capable" content="yes" />,
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />,
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,500,0,0" />,
