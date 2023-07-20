@@ -15,6 +15,21 @@ export default withLayout(DocsLayout, (props: Props) => {
 
   return (
     <DocumentationPage {...props} title="Intro" next={{ href: '/docs/routes', name: 'Routes' }}>
+      <div>
+        <p>Out of the box, Atlet allows you to:</p>  
+        <ul class="list-disc">
+          <li class="list-item ml-7">Use JSX</li>
+          <li class="list-item ml-7">Write async components, since everything is SSR only</li>
+          <li class="list-item ml-7">Use all your favorite Tailwind classes (thanks to UnoCSS)</li>
+          <li class="list-item ml-7">Write standard REST API endpoints</li>
+        </ul>
+      </div>
+
+      <p>
+        Other great advantage is that you can write your Atlet web application, and you can easily
+        deploy it on <a href="https://deno.com/deploy" class="font-medium hover:underline text-indigo-500">Deno Deploy</a>.  
+      </p>
+
       <DocumentationSection {...props} title="Getting started" id="getting-started">
         <p>To begin a project with Atlet, import the <code>createHandler</code> function from the <code>TODO</code>.</p>
         
@@ -57,10 +72,14 @@ export default withLayout(DocsLayout, (props: Props) => {
             serve(handler)
           `}
         />
+
+        <p>Now to start this web application use command <code class="bg-gray-200 text-gray-600 rounded-md px-2 py-1">deno run --allow-read --allow-net main.tsx</code>.</p>
         
+        <p>Flag <code class="bg-gray-200 text-gray-600 rounded-md px-2 py-1">--allow-read</code> is needed for the static asset handling.</p>
+
         <p>
           Right now, we just made a very basic website which will return a heading text with the current path. 
-          Now, let's check some other ways you can write endpoints.
+          Let's check some other ways you can write endpoints.
         </p>
       </DocumentationSection>
     </DocumentationPage>
