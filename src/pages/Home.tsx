@@ -38,7 +38,7 @@ export default withLayout(Layout, (props: Props) => {
             write or prototype something, this might be the tool for you :)
           </p>
         </div>
-        <div class="flex-1 space-y-2">
+        <div class="lg:w-1/2 space-y-2">
           <SyntaxHighlight
             code={`
               /**@jsx h */
