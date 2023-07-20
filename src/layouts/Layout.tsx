@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar.tsx'
 export default function Layout(props: Props) {
   props.page.title = 'Atlet'
   props.page.head.push(
+    <link rel="stylesheet" href="/css/scrollbar.css" />,
     <link rel="stylesheet" href="/css/code-theme.css" />,
     <link rel="icon" href="/img/favicon.png" />,
     <link rel="manifest" href="/manifest.json" />,
