@@ -24,7 +24,9 @@ export default function Layout(props: Props) {
         </div>
       </main>
       <footer class="py-5 bg-white border-t border-gray-200">
-        <p class="text-center text-gray-500 font-medium">Made with ❤️ by <a href="https://github.com/Hladikes" class="hover:underline text-indigo-600">Hladikes</a></p>
+        <p class="text-center text-gray-500 font-medium">
+          Made with <a href="https://github.com/atlet-framework/atlet" class="hover:underline text-indigo-600">Atlet</a> ❤️ by <a href="https://github.com/Hladikes" class="hover:underline text-indigo-600">Hladikes</a>
+        </p>
       </footer>
     </body>
   )
