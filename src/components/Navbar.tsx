@@ -16,21 +16,24 @@ export default function Navbar(props: Props) {
           </button>
         )}
 
-        <a href="/" class="text-xl pl-3">🏃 Atlet</a>
+        <a href="/" class="text-xl pl-3 flex items-center space-x-3">
+          <img src="/img/logo.png" alt="atlet logo" class="h-8 w-8" />
+          <span>Atlet</span>
+        </a>
       </div>
       <div class="flex flex-row">
         <a 
           href="https://github.com/atlet-framework/atlet" 
           target="_blank"
-          class="justify-self-stretch flex items-center px-3 hover:bg-gray-100">
+          class="justify-self-stretch flex items-center px-3 hover:bg-black/5">
           <img src="/img/github-mark.svg" alt="github" class="h-6" />
         </a>
         <a 
           href='/' 
-          class={`p-4 font-medium hover:underline hover:bg-gray-100 ${props.url.pathname === '/' ? 'text-black' : 'text-gray-500'}`}>Home</a>
+          class={`p-4 font-medium hover:underline hover:bg-black/5 ${props.url.pathname === '/' ? 'text-black' : 'text-gray-500'}`}>Home</a>
         <a 
           href='/docs/intro' 
-          class={`p-4 font-medium hover:underline hover:bg-gray-100 ${props.url.pathname.startsWith('/docs') ? 'text-black' : 'text-gray-500'}`}>Docs</a>
+          class={`p-4 font-medium hover:underline hover:bg-black/5 ${props.url.pathname.startsWith('/docs') ? 'text-black' : 'text-gray-500'}`}>Docs</a>
       </div>
     </nav>
   )
