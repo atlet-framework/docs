@@ -6,9 +6,9 @@ export default function Layout(props: Props) {
   props.page.title = 'Atlet'
   props.page.head.push(
     <link rel="stylesheet" href="/css/code-theme.css" />,
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏃</text></svg>" />,
+    <link rel="icon" href="/img/favicon.png" />,
     <link rel="manifest" href="/manifest.json" />,
-    <link rel="apple-touch-icon" href="/favicon.ico" />,
+    <link rel="apple-touch-icon" href="/img/favicon.png" />,
     <meta name="apple-mobile-web-app-capable" content="yes" />,
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />,
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,500,0,0" />,
