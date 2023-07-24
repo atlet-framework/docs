@@ -1,6 +1,6 @@
 /**@jsx h */
 /**@jsxFrag Fragment */
-import { Props, h, Fragment } from 'https://deno.land/x/atlet@1.0.0/mod.ts'
+import { Props, h, Fragment } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
 
 type Links = Array<[string, string]>
 
@@ -13,6 +13,7 @@ const links: Links = [
   ['Relay', '/docs/relay'],
   ['Static files', '/docs/static-files'],
   ['Forms', '/docs/forms'],
+  ['Rest API', '/docs/rest-api'],
   ['Not found', '/docs/not-found'],
   ['Interactivity', '/docs/interactivity'],
   ['Config', '/docs/config'],

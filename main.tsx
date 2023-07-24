@@ -1,7 +1,7 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts'
-import { createHandler, h, Props, NOT_FOUND, MIDDLEWARE, json, redirect, Config } from 'https://deno.land/x/atlet@1.0.0/mod.ts'
+import { createHandler, h, Props, NOT_FOUND, MIDDLEWARE, json, redirect, Config } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
 import Home from './src/pages/Home.tsx'
 import Intro from './src/pages/docs/Intro.tsx'
 import Routes from './src/pages/docs/Routes.tsx'
@@ -12,8 +12,9 @@ import Relay from './src/pages/docs/Relay.tsx'
 import Middleware from './src/pages/docs/Middleware.tsx'
 import StaticFiles from './src/pages/docs/StaticFiles.tsx'
 import Forms from './src/pages/docs/Forms.tsx'
-import Interactivity from './src/pages/docs/Interactivity.tsx'
+import RestApi from './src/pages/docs/RestApi.tsx'
 import NotFoundPage from './src/pages/docs/NotFoundPage.tsx'
+import Interactivity from './src/pages/docs/Interactivity.tsx'
 import ConfigPage from './src/pages/docs/ConfigPage.tsx'
 import Analytics from './src/pages/Analytics.tsx'
 
@@ -53,6 +54,7 @@ const handler = await createHandler({
   '/docs/middleware': Middleware,
   '/docs/static-files': StaticFiles,
   '/docs/forms': Forms,
+  '/docs/rest-api': RestApi,
   '/docs/not-found': NotFoundPage,
   '/docs/interactivity/api/random': async () => {
     await new Promise(r => setTimeout(r, 1000))
