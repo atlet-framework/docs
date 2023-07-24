@@ -1,5 +1,5 @@
 /** @jsx h */
-import { Props, h, withLayout } from 'https://deno.land/x/atlet@1.0.0/mod.ts'
+import { Props, h, withLayout } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
 import DocsLayout from '../../layouts/DocsLayout.tsx'
 import SyntaxHighlight from '../../plugins/highlight/SyntaxHighlight.tsx'
 import { DocumentationPage, DocumentationSection } from '../../components/docs/Page.tsx'
@@ -17,7 +17,7 @@ export default withLayout(DocsLayout, (props: Props) => {
     <DocumentationPage 
       {...props} 
       title="Not found"
-      previous={{ href: '/docs/forms', name: 'Forms' }}
+      previous={{ href: '/docs/rest-api', name: 'Rest API' }}
       next={{ href: '/docs/interactivity', name: 'Interactivity' }}>
 
       <DocumentationSection {...props}>

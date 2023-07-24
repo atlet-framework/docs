@@ -1,5 +1,5 @@
 /** @jsx h */
-import { Props, h } from 'https://deno.land/x/atlet@1.0.0/mod.ts'
+import { Props, h } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
 import Navbar from '../components/Navbar.tsx'
 
 export default function Layout(props: Props) {

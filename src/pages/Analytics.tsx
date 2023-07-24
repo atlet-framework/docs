@@ -1,6 +1,6 @@
 /**@jsx h */
 /**@jsxFrag Fragment */
-import { Props, h, Fragment } from 'https://deno.land/x/atlet@1.0.0/mod.ts'
+import { Props, h, Fragment } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
 import { RelayData, kv } from '../../main.tsx'
 
 type PageVisitEntity = {
