@@ -39,7 +39,7 @@ export default function Sidebar(props: Props) {
           {links.map(([name, href]) => (
             <a 
               href={href} 
-              class={`px-3 sm:py-2 py-1 rounded-sm hover:underline hover:bg-gray-100 ${props.url.pathname === href ? 'text-black font-medium bg-gray-100' : 'text-gray-600'}`}>{name}</a>
+              class={`px-2 py-1 rounded-sm hover:underline hover:bg-gray-100 ${props.url.pathname === href ? 'text-black font-medium bg-gray-100' : 'text-gray-600'}`}>{name}</a>
           ))}
         </div>
       </aside>
