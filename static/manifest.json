@@ -1,8 +1,6 @@
 {
   "name": "Atlet",
   "short_name": "Atlet",
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
   "lang": "en-US",
   "start_url": "/",
   "display": "fullscreen",
