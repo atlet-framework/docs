@@ -1,5 +1,5 @@
 /** @jsx h */
-import { Props, h, withLayout } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
+import { Props, h, withLayout } from 'https://deno.land/x/atlet@1.3.0/mod.ts'
 import DocsLayout from '../../layouts/DocsLayout.tsx'
 import SyntaxHighlight from '../../plugins/highlight/SyntaxHighlight.tsx'
 import { DocumentationPage, DocumentationSection } from '../../components/docs/Page.tsx'
@@ -21,13 +21,13 @@ export default withLayout(DocsLayout, (props: Props) => {
       </DocumentationSection>
 
       <SyntaxHighlight 
-          code={`
-            export type Config = {
-              static?: string
-              unoCSS?: boolean
-            }
-          `}
-        />
+        code={`
+          export type Config = {
+            static?: string
+            unocss?: UnoGenerator
+          }
+        `}
+      />
 
       <DocumentationSection {...props} title="Static" id="static">
         <p>
@@ -42,8 +42,41 @@ export default withLayout(DocsLayout, (props: Props) => {
           which is a CSS atomic library, similair to the <a href="https://tailwindcss.com/" class="hover:underline font-medium text-indigo-500">Tailwind</a>.
         </p>
         <p>
-          When set to <code>true</code>, it will generate all necessary CSS classes, which are used in your components. 
+          To setup UnoCSS, you have to provide your own instance of a <code>UnoGenerator</code>.
         </p>
+        <SyntaxHighlight 
+          code={`
+            const config: Config = {
+              static: './static',
+              unocss: new UnoGenerator({
+                presets: [presetWind()],
+              }),
+            }
+          `}
+        />
+        <p>
+          As mentioned in the <a href="https://unocss.dev/guide/style-reset" class="hover:underline font-medium text-indigo-500">UnoCSS - Browser Style Reset</a> section:
+        </p>
+        <p class="pl-3 py-2 border-l-2 border-gray-300 bg-gray-100">
+          UnoCSS does not provide style resetting or preflight by default for maximum flexibility and does not populate your global CSS. If you 
+          use UnoCSS along with other CSS frameworks, they probably already do the resetting for you. If you 
+          use UnoCSS alone, you can use resetting libraries like Normalize.css.
+        </p>
+        <p>
+          If you want to reset your CSS, you can do so by adding a <code>link</code> element to either your middleware, or your layout.
+        </p>
+        <SyntaxHighlight 
+          code={`
+            const handler = await createHandler({
+              [MIDDLEWARE]: (props) => {
+                // In this case, the <link/> will only be included to the pages which are using JSX.
+                props.page.head.push(
+                  <link rel="stylesheet" href="https://esm.sh/@unocss/reset@0.53.4/tailwind.css" />,
+                )
+              },
+            })
+          `}
+        />
       </DocumentationSection>
     </DocumentationPage>
   )

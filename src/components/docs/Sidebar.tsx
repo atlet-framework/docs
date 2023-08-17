@@ -1,6 +1,6 @@
 /**@jsx h */
 /**@jsxFrag Fragment */
-import { Props, h, Fragment } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
+import { Props, h, Fragment } from 'https://deno.land/x/atlet@1.3.0/mod.ts'
 
 type Links = Array<[string, string]>
 
@@ -30,7 +30,7 @@ export default function Sidebar(props: Props) {
           'pointer-events-none': !menuVisible,
         }"></div>
       <aside 
-        class="flex flex-col border-r h-full lg:h-auto border-gray-200 space-y-1 p-2 w-48 fixed z-40 lg:static -translate-x-48 lg:translate-x-0 bg-white transition-transform" 
+        class="flex flex-col border-r h-full lg:h-auto border-gray-400/20 space-y-1 p-2 w-48 fixed z-40 lg:static -translate-x-48 lg:translate-x-0 transition-transform" 
         v-bind:class="{ 
           'translate-x-0': menuVisible,
           '-translate-x-48': !menuVisible,
@@ -39,7 +39,7 @@ export default function Sidebar(props: Props) {
           {links.map(([name, href]) => (
             <a 
               href={href} 
-              class={`px-2 py-1 rounded-sm hover:underline hover:bg-gray-100 ${props.url.pathname === href ? 'text-black font-medium bg-gray-100' : 'text-gray-600'}`}>{name}</a>
+              class={`px-2.5 py-1.5 rounded-md font-medium  hover:bg-gray-400/10 ${props.url.pathname === href ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400' : 'text-stone-600 dark:text-stone-300'}`}>{name}</a>
           ))}
         </div>
       </aside>

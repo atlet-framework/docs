@@ -1,9 +1,9 @@
 /**@jsx h */
-import { Props, h } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
+import { Props, h } from 'https://deno.land/x/atlet@1.3.0/mod.ts'
 
 export default function Navbar(props: Props) {
   return (
-    <nav class="sticky top-0 z-50 flex flex-row items-center justify-between border-b border-gray-200 bg-gradient-to-b from-white via-white/90 to-white/80 backdrop-blur-sm">
+    <nav class="sticky top-0 z-50 flex flex-row items-center justify-between border-b border-gray-400/20 bg-gradient-to-b from-white via-white/90 to-white/80 dark:from-stone-900 dark:via-stone-900 backdrop-blur-sm">
       <div class="flex self-stretch items-center">
         {props.url.pathname.startsWith('/doc') && (
           <button 
@@ -25,15 +25,15 @@ export default function Navbar(props: Props) {
         <a 
           href="https://github.com/atlet-framework/atlet" 
           target="_blank"
-          class="justify-self-stretch flex items-center px-3 hover:bg-black/5">
-          <img src="/img/github-mark.svg" alt="github" class="h-6" />
+          class="justify-self-stretch flex items-center px-3 hover:bg-gray-400/10">
+          <img src="/img/github-mark.svg" alt="github" class="h-7 p-0.5 bg-white rounded-full" />
         </a>
         <a 
           href='/' 
-          class={`p-4 font-medium hover:underline hover:bg-black/5 ${props.url.pathname === '/' ? 'text-black' : 'text-gray-500'}`}>Home</a>
+          class={`p-4 font-medium hover:underline hover:bg-gray-400/10 ${props.url.pathname === '/' ? '' : 'opacity-80'}`}>Home</a>
         <a 
           href='/docs/intro' 
-          class={`p-4 font-medium hover:underline hover:bg-black/5 ${props.url.pathname.startsWith('/docs') ? 'text-black' : 'text-gray-500'}`}>Docs</a>
+          class={`p-4 font-medium hover:underline hover:bg-gray-400/10 ${props.url.pathname.startsWith('/docs') ? '' : 'opacity-80'}`}>Docs</a>
       </div>
     </nav>
   )

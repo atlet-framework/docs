@@ -1,5 +1,5 @@
 /**@jsx h */
-import { withLayout, h, Props } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
+import { withLayout, h, Props } from 'https://deno.land/x/atlet@1.3.0/mod.ts'
 import Sidebar from '../components/docs/Sidebar.tsx'
 import Layout from './Layout.tsx'
 

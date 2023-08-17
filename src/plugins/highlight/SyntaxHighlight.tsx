@@ -1,5 +1,5 @@
 /**@jsx h */
-import { h } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
+import { h } from 'https://deno.land/x/atlet@1.3.0/mod.ts'
 import hljs from 'https://esm.sh/highlight.js@11.8.0/lib/core'
 import typescript from 'https://esm.sh/highlight.js@11.8.0/lib/languages/typescript'
 import xml from 'https://esm.sh/highlight.js@11.8.0/lib/languages/xml'

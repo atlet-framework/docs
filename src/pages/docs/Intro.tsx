@@ -1,5 +1,5 @@
 /** @jsx h */
-import { Props, h, withLayout } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
+import { Props, h, withLayout } from 'https://deno.land/x/atlet@1.3.0/mod.ts'
 import DocsLayout from '../../layouts/DocsLayout.tsx'
 import SyntaxHighlight from '../../plugins/highlight/SyntaxHighlight.tsx'
 import { DocumentationPage, DocumentationSection } from '../../components/docs/Page.tsx'
@@ -73,9 +73,9 @@ export default withLayout(DocsLayout, (props: Props) => {
           `}
         />
 
-        <p>Now to start this web application use command <code class="bg-gray-200 text-gray-600 rounded-md px-2 py-1">deno run --allow-read --allow-net main.tsx</code>.</p>
+        <p>Now to start this web application use command <code class="bg-gray-400/10 rounded-md px-2 py-1">deno run --allow-read --allow-net main.tsx</code>.</p>
         
-        <p>Flag <code class="bg-gray-200 text-gray-600 rounded-md px-2 py-1">--allow-read</code> is needed for the static asset handling.</p>
+        <p>Flag <code class="bg-gray-400/10 rounded-md px-2 py-1">--allow-read</code> is needed for the static asset handling.</p>
 
         <p>
           Right now, we just made a very basic website which will return a heading text with the current path. 

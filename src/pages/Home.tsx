@@ -1,6 +1,6 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
-import { Props, h, Fragment, withLayout } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
+import { Props, h, Fragment, withLayout } from 'https://deno.land/x/atlet@1.3.0/mod.ts'
 import Layout from '../layouts/Layout.tsx'
 import { seo } from "../plugins/seo.tsx";
 import SyntaxHighlight from "../plugins/highlight/SyntaxHighlight.tsx";
@@ -13,10 +13,10 @@ export default withLayout(Layout, (props: Props) => {
   }))
   
   return (
-    <div class="space-y-4 lg:space-y-7 mt-4 px-4 dark dark:bg-red-500">
+    <div class="space-y-4 lg:space-y-7 mt-4 px-4">
       <div class="space-y-2">
         <h1 class="text-5xl">Atlet</h1>
-        <h3 class="text-gray-500">Yet another web framework.</h3>
+        <h3 class="opacity-50">Yet another web framework.</h3>
       </div>
 
       <div class="flex lg:flex-row flex-col gap-4">
@@ -57,14 +57,16 @@ export default withLayout(Layout, (props: Props) => {
               serve(handler)
             `}
           />
-          <p class="text-gray-600 text-center">Example of a simple webapp, written in Atlet</p>
+          <p class="text-center opacity-50">Example of a simple webapp, written in Atlet</p>
         </div>
       </div>
 
       <div class="flex justify-center pb-6">
-        <a href="/docs" class="py-4 px-5 rounded-sm font-medium inline-flex space-x-3 items-center bg-gray-100 text-gray-900 group hover:bg-gray-200">
+        <a href="/docs" class="py-4 px-5 rounded-sm font-medium inline-flex space-x-3 items-center bg-gray-400/10 group hover:bg-gray-400/5">
           <span class="group-hover:underline">Go to the Documentation</span>
-          <img class="h-6 w-6" src="/img/icons/arrow_forward.svg" alt="arrow forward" />
+          <svg xmlns="http://www.w3.org/2000/svg" class="dark:fill-white w-6 h-6" viewBox="0 -960 960 960" alt="arrow forward">
+            <path d="M662.08-442.123H153.304v-75.754H662.08L426.384-753.573 480-806.855 806.855-480 480-153.304l-53.616-53.123L662.08-442.123Z"/>
+          </svg>
         </a>
       </div>
     </div>
