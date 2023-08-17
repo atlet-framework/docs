@@ -57,7 +57,7 @@ export default withLayout(DocsLayout, (props: Props) => {
         <p>
           As mentioned in the <a href="https://unocss.dev/guide/style-reset" class="hover:underline font-medium text-indigo-500">UnoCSS - Browser Style Reset</a> section:
         </p>
-        <p class="pl-3 py-2 border-l-2 border-gray-300 bg-gray-100">
+        <p class="pl-3 py-2 border-l-2 border-gray-400/20 bg-gray-400/10">
           UnoCSS does not provide style resetting or preflight by default for maximum flexibility and does not populate your global CSS. If you 
           use UnoCSS along with other CSS frameworks, they probably already do the resetting for you. If you 
           use UnoCSS alone, you can use resetting libraries like Normalize.css.

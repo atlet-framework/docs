@@ -68,10 +68,10 @@ export default withLayout(DocsLayout, (props: Props) => {
 
         <p>Result:</p>
 
-        <div class="border border-gray-300 p-4 bg-white rounded-md">
+        <div class="border border-gray-400/10 bg-gray-400/5 p-4 rounded-md">
           <div v-scope="{ count: 0 }">
             <p>Current count is {'{{{ count }}}'}</p>
-            <button v-on:click="count++" class="bg-gray-800 py-2 px-3 font-medium text-sm mt-2 rounded-md shadow-md text-white hover:opacity-90">Increment</button>
+            <button v-on:click="count++" class="bg-gray-800 dark:bg-stone-700 py-2 px-3 font-medium text-sm mt-2 rounded-md shadow-md text-white hover:opacity-90">Increment</button>
           </div>
         </div>
       </DocumentationSection>
@@ -141,13 +141,13 @@ export default withLayout(DocsLayout, (props: Props) => {
 
         <p>Result:</p>
 
-        <div class="border border-gray-300 p-4 bg-white rounded-md">
+        <div class="border border-gray-400/10 bg-gray-400/5 p-4 rounded-md">
           <div v-scope class="space-y-2">
             <h1 v-if="randomNumber">Random number is {'{{{ randomNumber }}}'}</h1>
             <button 
               v-on:click="getRandomNumber"
               v-bind:disabled="loading"
-              class="bg-gray-800 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed py-2 px-3 font-medium text-sm rounded-md shadow-md text-white">
+              class="bg-gray-800 dark:bg-stone-700 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed py-2 px-3 font-medium text-sm rounded-md shadow-md text-white">
               {'{{{ loading ? "Loading ..." : "Get random number" }}}'}
             </button>
           </div>
