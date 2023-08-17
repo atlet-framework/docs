@@ -31,7 +31,7 @@ export default function Sidebar(props: Props) {
         }">
       </div>
       <aside 
-        class="flex flex-col border-r h-full lg:h-auto bg-white dark:bg-stone-900 border-gray-400/20 space-y-1 p-2 w-48 fixed z-40 lg:static -translate-x-48 lg:translate-x-0 transition-transform" 
+        class="flex flex-col border-r h-full lg:h-auto bg-white dark:bg-stone-900 border-stone-400/20 space-y-1 p-2 w-48 fixed z-40 lg:static -translate-x-48 lg:translate-x-0 transition-transform" 
         v-bind:class="{ 
           'translate-x-0': menuVisible,
           '-translate-x-48': !menuVisible,
@@ -40,7 +40,7 @@ export default function Sidebar(props: Props) {
           {links.map(([name, href]) => (
             <a 
               href={href} 
-              class={`px-2.5 py-1.5 rounded-md font-medium  hover:bg-gray-400/10 ${props.url.pathname === href ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400' : 'text-stone-600 dark:text-stone-300'}`}>{name}</a>
+              class={`px-2.5 py-1.5 rounded-md font-medium  hover:bg-stone-400/10 ${props.url.pathname === href ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400' : 'text-stone-600 dark:text-stone-300'}`}>{name}</a>
           ))}
         </div>
       </aside>

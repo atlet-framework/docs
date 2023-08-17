@@ -15,7 +15,7 @@ type DocumentationPageProps = {
 
 export function DocumentationPage(props: Props & DocumentationPageProps) {
   return (
-    <div class="space-y-6 p-2 pb-5">
+    <div class="space-y-6 pb-5">
       <h1 class="text-4xl">{props.title}</h1>
       {props.children}
       <div class="flex pt-5 space-x-5">

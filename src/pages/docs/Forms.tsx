@@ -65,7 +65,7 @@ export default withLayout(DocsLayout, async (props: Props) => {
 
         <p>Result:</p>
 
-        <div class="border border-gray-200 p-4 bg-white rounded-lg space-y-3">
+        <div class="border border-stone-400/20 bg-stone-400/5 p-4 rounded-md space-y-3">
           <h1 class="text-2xl">Login</h1>
           
           {await (async () => {
@@ -81,9 +81,9 @@ export default withLayout(DocsLayout, async (props: Props) => {
           })()}
 
           <form method="POST" class="flex flex-col space-y-2">
-            <input placeholder="Username" name="username" type="text" class="py-3 px-4 bg-gray-100 rounded-lg" />
-            <input placeholder="Password" name="password" type="password" class="py-3 px-4 bg-gray-100 rounded-lg" />
-            <button type="submit" class="bg-gray-800 py-3 px-4 font-medium text-sm mt-2 rounded-md shadow-md text-white hover:opacity-90">LOGIN</button>
+            <input placeholder="Username" name="username" type="text" class="py-3 px-4 bg-stone-500/10 placeholder-stone-600 rounded-lg" />
+            <input placeholder="Password" name="password" type="password" class="py-3 px-4 bg-stone-500/10 placeholder-stone-600 rounded-lg" />
+            <button type="submit" class="bg-gray-800 dark:bg-stone-700 py-3 px-4 font-medium text-sm mt-2 rounded-md shadow-md text-white hover:opacity-90">LOGIN</button>
           </form>
         </div>
       </DocumentationSection>

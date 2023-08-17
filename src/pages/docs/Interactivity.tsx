@@ -68,7 +68,7 @@ export default withLayout(DocsLayout, (props: Props) => {
 
         <p>Result:</p>
 
-        <div class="border border-gray-400/10 bg-gray-400/5 p-4 rounded-md">
+        <div class="border border-stone-400/20 bg-stone-400/5 p-4 rounded-md">
           <div v-scope="{ count: 0 }">
             <p>Current count is {'{{{ count }}}'}</p>
             <button v-on:click="count++" class="bg-gray-800 dark:bg-stone-700 py-2 px-3 font-medium text-sm mt-2 rounded-md shadow-md text-white hover:opacity-90">Increment</button>
@@ -141,7 +141,7 @@ export default withLayout(DocsLayout, (props: Props) => {
 
         <p>Result:</p>
 
-        <div class="border border-gray-400/10 bg-gray-400/5 p-4 rounded-md">
+        <div class="border border-stone-400/20 bg-stone-400/5 p-4 rounded-md">
           <div v-scope class="space-y-2">
             <h1 v-if="randomNumber">Random number is {'{{{ randomNumber }}}'}</h1>
             <button 
