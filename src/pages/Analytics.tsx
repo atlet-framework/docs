@@ -1,14 +1,14 @@
 /**@jsx h */
 /**@jsxFrag Fragment */
 import { Props, h, Fragment } from 'https://deno.land/x/atlet@1.1.0/mod.ts'
-import { RelayData, kv } from '../../main.tsx'
+import { Context, kv } from '../../main.tsx'
 
 type PageVisitEntity = {
   url: string
   visitsCount: number
 }
 
-async function AnalyticsTable(props: Props<RelayData>) {
+async function AnalyticsTable(props: Props<Context>) {
   const list = kv.list({
     prefix: ['analytics', 'page_visit'],
   })
@@ -60,7 +60,7 @@ async function AnalyticsTable(props: Props<RelayData>) {
   )
 }
 
-export default async function Analytics(props: Props<RelayData>) {
+export default async function Analytics(props: Props<Context>) {
   let logged = false
   let message = null
   

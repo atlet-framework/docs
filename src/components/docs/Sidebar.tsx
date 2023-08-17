@@ -10,7 +10,7 @@ const links: Links = [
   ['Props', '/docs/props'],
   ['Layouts', '/docs/layouts'],
   ['Middleware', '/docs/middleware'],
-  ['Relay', '/docs/relay'],
+  ['Context', '/docs/context'],
   ['Static files', '/docs/static-files'],
   ['Forms', '/docs/forms'],
   ['Rest API', '/docs/rest-api'],

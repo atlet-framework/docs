@@ -17,7 +17,7 @@ export default withLayout(DocsLayout, (props: Props) => {
     <DocumentationPage 
       {...props} 
       title="Static files"
-      previous={{ href: '/docs/relay', name: 'Relay' }}
+      previous={{ href: '/docs/context', name: 'Context' }}
       next={{ href: '/docs/forms', name: 'Forms' }}>
       
       <DocumentationSection {...props}>

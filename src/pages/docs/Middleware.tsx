@@ -18,7 +18,7 @@ export default withLayout(DocsLayout, (props: Props) => {
       {...props} 
       title="Middleware"
       previous={{ href: '/docs/layouts', name: 'Layouts' }}
-      next={{ href: '/docs/relay', name: 'Relay' }}>
+      next={{ href: '/docs/context', name: 'Context' }}>
 
       <DocumentationSection {...props}>
         <p>

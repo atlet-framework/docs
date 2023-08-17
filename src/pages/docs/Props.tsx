@@ -18,7 +18,7 @@ export default withLayout(DocsLayout, (props: Props) => {
       {...props} 
       title="Props"
       previous={{ href: '/docs/routes', name: 'Routes' }}
-      next={{ href: '/docs/relay', name: 'Relay' }}>
+      next={{ href: '/docs/context', name: 'Context' }}>
 
       <DocumentationSection {...props}>
         <p>
@@ -28,13 +28,13 @@ export default withLayout(DocsLayout, (props: Props) => {
         <p>Here is the overall type definition of the <code>Props</code> object:</p>
         <SyntaxHighlight 
           code={`
-            type Relay = Record<string, unknown>  
+            type Context = Record<string, unknown>  
             
-            export type Props<T extends Relay = Relay> = {
+            export type Props<T extends Context = Context> = {
               request: Request
               params: Record<string string>
               query: URLSearchParams
-              relay: T
+              ctx: T
               headers: Headers
               children: Array<Node<unknown>>
               url: URL
@@ -98,10 +98,10 @@ export default withLayout(DocsLayout, (props: Props) => {
         />
       </DocumentationSection>
       
-      <DocumentationSection {...props} title="Relay" id="relay">
+      <DocumentationSection {...props} title="Context" id="context">
         <p>
-          Relay object is a primitive object which allows you to pass data from the layout or middleware, to the actual endpoint. 
-          Learn more in the <a href="/docs/relay" class="hover:underline text-indigo-500 font-medium">Relay</a> section.
+          Context object is a primitive object which allows you to pass data from the layout or middleware, to the actual endpoint. 
+          Learn more in the <a href="/docs/context" class="hover:underline text-indigo-500 font-medium">Context</a> section.
         </p>
       </DocumentationSection>
 

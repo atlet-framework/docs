@@ -8,7 +8,7 @@ import Routes from './src/pages/docs/Routes.tsx'
 import NotFound from './src/pages/NotFound.tsx'
 import PropsPage from './src/pages/docs/Props.tsx'
 import LayoutsPage from './src/pages/docs/Layouts.tsx'
-import Relay from './src/pages/docs/Relay.tsx'
+import Context from './src/pages/docs/Context.tsx'
 import Middleware from './src/pages/docs/Middleware.tsx'
 import StaticFiles from './src/pages/docs/StaticFiles.tsx'
 import Forms from './src/pages/docs/Forms.tsx'
@@ -23,7 +23,7 @@ const config: Config = {
   unoCSS: true,
 }
 
-export type RelayData = {
+export type Context = {
   kv: Deno.Kv
 }
 
@@ -49,7 +49,7 @@ const handler = await createHandler({
   '/docs/intro': Intro,
   '/docs/routes': Routes,
   '/docs/props': PropsPage,
-  '/docs/relay': Relay,
+  '/docs/context': Context,
   '/docs/layouts': LayoutsPage,
   '/docs/middleware': Middleware,
   '/docs/static-files': StaticFiles,

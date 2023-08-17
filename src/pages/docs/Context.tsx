@@ -6,9 +6,9 @@ import { DocumentationPage, DocumentationSection } from '../../components/docs/P
 import { seo } from '../../plugins/seo.tsx'
 
 export default withLayout(DocsLayout, (props: Props) => {
-  props.page.title = 'Relay'
+  props.page.title = 'Context'
   props.page.head.push(...seo({
-    title: 'Atlet Documentation 🏃 - Relay',
+    title: 'Atlet Documentation 🏃 - Context',
     description: 'Passing data from layouts and middlewares in Atlet',
     link: 'https://atlet.deno.dev/docs/middleware',
   }))
@@ -16,25 +16,24 @@ export default withLayout(DocsLayout, (props: Props) => {
   return (
     <DocumentationPage 
       {...props} 
-      title="Relay"
+      title="Context"
       previous={{ href: '/docs/middleware', name: 'Middleware' }}
       next={{ href: '/docs/static-files', name: 'Static files' }}>
 
       <p>
-        Relay is a primitive object which let's you pass data from middleware or layout, to the targeted route.
-        Equivalent to this in other frameworks is <code>Context</code> object.
+        Context is a primitive object which let's you pass data from middleware or layout, to the targeted route.
       </p>
 
-      <DocumentationSection {...props} title="Relay in layouts" id="relay-in-layouts">
+      <DocumentationSection {...props} title="Context in layouts" id="context-in-layouts">
         <p>
           Imagine a scenario, where you have a layout with navbar, in which you want to show a very
           small picture of a currently logged user. No problem, you can just easily fetch user data
           from Database, and show it. However, what if you want to display some information about the
           user in a currently displayed page ? Do you have to fetch user data again ? Well thanks
-          to the relay, you don't have to.
+          to the context, you don't have to.
         </p>
         
-        <p>Here is an example of using <code>relay</code> in middleware:</p>
+        <p>Here is an example of using <code>ctx</code> in middleware:</p>
 
         <SyntaxHighlight 
           code={`
@@ -44,28 +43,28 @@ export default withLayout(DocsLayout, (props: Props) => {
             import { createHandler, withLayout, Props, h, Fragment } from '${Deno.env.get('ATLET_URL')}'
             import { getTheoreticallyAuthorizedUser } from 'legit-auth'
 
-            type RelayData = {
+            type Context = {
               user: {
                 id: string
                 name: string
               }
             }
 
-            const Layout = async (props: Props<RelayData>) => {
-              props.relay.user = await getTheoreticallyAuthorizedUser(props.request)
+            const Layout = async (props: Props<Context>) => {
+              props.ctx.user = await getTheoreticallyAuthorizedUser(props.request)
 
               return (
                 <main>
                   <nav>
-                    <img src={props.relay.user.picture} alt="Your profile picture" />
+                    <img src={props.ctx.user.picture} alt="Your profile picture" />
                   </nav>
                   <section>{props.children}</section>
                 </main>
               )
             }
 
-            const Home = withLayout(Layout, (props: Props<RelayData>) => (
-              <h1>Hello {props.relay.user.name}</h1>
+            const Home = withLayout(Layout, (props: Props<Context>) => (
+              <h1>Hello {props.ctx.user.name}</h1>
             ))
 
             const handler = await createHandler({
@@ -78,8 +77,8 @@ export default withLayout(DocsLayout, (props: Props) => {
         />
       </DocumentationSection>
 
-      <DocumentationSection {...props} title="Relay in middleware" id="relay-in-middleware">
-        <p>Example of using <code>relay</code> in middleware:</p>
+      <DocumentationSection {...props} title="Context in middleware" id="context-in-middleware">
+        <p>Example of using <code>ctx</code> in middleware:</p>
 
         <SyntaxHighlight 
           code={`
@@ -89,7 +88,7 @@ export default withLayout(DocsLayout, (props: Props) => {
             import { createHandler, MIDDLEWARE, Props, h, Fragment } from '${Deno.env.get('ATLET_URL')}'
             import { getTheoreticallyAuthorizedUser } from 'legit-auth'
 
-            type RelayData = {
+            type Context = {
               user: {
                 id: string
                 name: string
@@ -97,14 +96,14 @@ export default withLayout(DocsLayout, (props: Props) => {
             }
 
             // You can also pass the type into the createHandler function itself
-            const handler = await createHandler<RelayData>({
+            const handler = await createHandler<Context>({
               // No need to define Props type, since it's generic version is inferred
               [MIDDLEWARE]: (props) => {
                 // TypeScript IntelliSense will work here 😎
-                props.relay.user = await getTheoreticallyAuthorizedUser(props.request)
+                props.ctx.user = await getTheoreticallyAuthorizedUser(props.request)
               },
               '/': (props) => (
-                <h1>Logged in as {props.relay.user.name}</h1>
+                <h1>Logged in as {props.ctx.user.name}</h1>
               )
             })
 
@@ -115,8 +114,8 @@ export default withLayout(DocsLayout, (props: Props) => {
 
         <p>
           Unfortunately, if you want to have your route functions in different files, the inference will break.
-          In that case, you can export your type which defines the data in your relay, and pass it as a generic
-          type to the props type. This also applies for using <code>relay</code> in layouts.
+          In that case, you can export your type which defines the data in your <code>ctx</code>, and pass it as a generic
+          type to the props type. This also applies for using <code>ctx</code> in layouts.
         </p>
 
         <SyntaxHighlight
@@ -128,16 +127,16 @@ export default withLayout(DocsLayout, (props: Props) => {
             import { createHandler, MIDDLEWARE, Props, h, Fragment } from '${Deno.env.get('ATLET_URL')}'
             import Home from './Home.tsx'
 
-            export type RelayData = {
+            export type Context = {
               user: {
                 id: string
                 name: string
               }
             }
 
-            const handler = await createHandler<RelayData>({
+            const handler = await createHandler<Context>({
               [MIDDLEWARE]: (props) => {
-                props.relay.user = await getTheoreticallyAuthorizedUser(props.request)
+                props.ctx.user = await getTheoreticallyAuthorizedUser(props.request)
               },
               '/': Home,
             })
@@ -153,12 +152,12 @@ export default withLayout(DocsLayout, (props: Props) => {
             /**@jsx h */
             /**@jsxFrag Fragment */
             import { Props, h, Fragment } from '${Deno.env.get('ATLET_URL')}'
-            import { RelayData } from './main.tsx'
+            import { Context } from './main.tsx'
 
-            export default function Home(props: Props<RelayData>) {
+            export default function Home(props: Props<Context>) {
               return (
                 // Autocompletion will work here (hopefully)
-                <h1>Logged in as {props.relay.user.name}</h1>
+                <h1>Logged in as {props.ctx.user.name}</h1>
               )
             }
           `}
