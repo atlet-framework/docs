@@ -11,7 +11,7 @@ export default function Layout(props: Props) {
     <link rel="manifest" href="/manifest.json" />,
     <link rel="apple-touch-icon" href="/img/logo.png" />,
     <meta name="apple-mobile-web-app-capable" content="yes" />,
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />,
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />,
     <link rel="stylesheet" href="https://esm.sh/@unocss/reset@0.53.4/tailwind.css" />,
   )
 
