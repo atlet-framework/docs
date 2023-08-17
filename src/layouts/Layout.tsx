@@ -16,7 +16,7 @@ export default function Layout(props: Props) {
   )
 
   return (
-    <body class="bg-white dark:bg-stone-900 dark:text-stone-200 min-h-screen">
+    <body class="bg-white dark:bg-stone-900 dark:text-stone-300 min-h-screen">
       <main v-scope class="px-0 lg:px-4 mx-auto max-w-screen-lg min-h-screen flex flex-col">
         <Navbar {...props} />
         <div class=" flex-1 flex flex-col">

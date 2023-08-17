@@ -12,7 +12,9 @@ export default function Navbar(props: Props) {
             v-bind:class="{
               '-translate-x-1': menuVisible,
             }">
-            <img class="h-6 w-6" src="/img/icons/menu.svg" alt="menu" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 dark:fill-white" viewBox="0 -960 960 960" alt="menu">
+              <path d="M113.304-230.195v-75.913h733.551v75.913H113.304Zm0-211.928v-75.754h733.551v75.754H113.304Zm0-211.769v-75.913h733.551v75.913H113.304Z"/>
+            </svg>
           </button>
         )}
 

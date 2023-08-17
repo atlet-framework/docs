@@ -28,9 +28,10 @@ export default function Sidebar(props: Props) {
         v-bind:class="{
           'bg-black/10 pointer-events-auto': menuVisible,
           'pointer-events-none': !menuVisible,
-        }"></div>
+        }">
+      </div>
       <aside 
-        class="flex flex-col border-r h-full lg:h-auto border-gray-400/20 space-y-1 p-2 w-48 fixed z-40 lg:static -translate-x-48 lg:translate-x-0 transition-transform" 
+        class="flex flex-col border-r h-full lg:h-auto bg-white dark:bg-stone-900 border-gray-400/20 space-y-1 p-2 w-48 fixed z-40 lg:static -translate-x-48 lg:translate-x-0 transition-transform" 
         v-bind:class="{ 
           'translate-x-0': menuVisible,
           '-translate-x-48': !menuVisible,
