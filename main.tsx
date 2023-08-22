@@ -16,7 +16,6 @@ import RestApi from './src/pages/docs/RestApi.tsx'
 import NotFoundPage from './src/pages/docs/NotFoundPage.tsx'
 import Interactivity from './src/pages/docs/Interactivity.tsx'
 import ConfigPage from './src/pages/docs/ConfigPage.tsx'
-import Analytics from './src/pages/Analytics.tsx'
 import { UnoGenerator } from 'https://esm.sh/@unocss/core@0.53.4'
 import { presetWind } from 'https://esm.sh/@unocss/preset-wind@0.53.4'
 
@@ -29,27 +28,7 @@ const config: Config = {
   }),
 }
 
-export type Context = {
-  kv: Deno.Kv
-}
-
-export const kv = await Deno.openKv()
-
 const handler = await createHandler({
-  [MIDDLEWARE]: (props) => {
-    const page = props.url.href.replace(props.url.origin, '')
-
-    if (!page.includes('.') && !page.includes('/_/')) {
-      kv.atomic()
-        .mutate({
-          type: 'sum',
-          key: ['analytics', 'page_visit', page],
-          value: new Deno.KvU64(1n),
-        })
-        .commit()
-    }
-  },
-  '/_/analytics': Analytics,
   '/': Home,
   '/docs': () => redirect('/docs/intro'),
   '/docs/intro': Intro,
