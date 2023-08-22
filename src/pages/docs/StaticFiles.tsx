@@ -1,5 +1,5 @@
 /** @jsx h */
-import { Props, h, withLayout } from 'https://deno.land/x/atlet@1.4.0/mod.ts'
+import { Props, h, withLayout } from 'https://deno.land/x/atlet@1.4.1/mod.ts'
 import DocsLayout from '../../layouts/DocsLayout.tsx'
 import SyntaxHighlight from '../../plugins/highlight/SyntaxHighlight.tsx'
 import { DocumentationPage, DocumentationSection } from '../../components/docs/Page.tsx'

@@ -1,6 +1,6 @@
 /**@jsx h */
 /**@jsxFrag Fragment */
-import { Props, h, Fragment } from 'https://deno.land/x/atlet@1.4.0/mod.ts'
+import { Props, h, Fragment } from 'https://deno.land/x/atlet@1.4.1/mod.ts'
 
 type Links = Array<[string, string]>
 
