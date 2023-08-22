@@ -1,5 +1,5 @@
 /**@jsx h */
-import { Props, h } from 'https://deno.land/x/atlet@1.3.0/mod.ts'
+import { Props, h } from 'https://deno.land/x/atlet@1.4.0/mod.ts'
 
 type DocumentationPageProps = {
   title: string

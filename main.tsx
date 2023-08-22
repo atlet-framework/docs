@@ -1,7 +1,7 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts'
-import { createHandler, h, Props, NOT_FOUND, MIDDLEWARE, json, redirect, Config } from 'https://deno.land/x/atlet@1.3.0/mod.ts'
+import { createHandler, h, Props, NOT_FOUND, MIDDLEWARE, json, redirect, Config } from 'https://deno.land/x/atlet@1.4.0/mod.ts'
 import Home from './src/pages/Home.tsx'
 import Intro from './src/pages/docs/Intro.tsx'
 import Routes from './src/pages/docs/Routes.tsx'
